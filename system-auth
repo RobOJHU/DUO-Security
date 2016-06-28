@@ -2,9 +2,10 @@
 # This file is auto-generated.
 # User changes will be destroyed the next time authconfig is run.
 auth        required      pam_env.so
-auth        sufficient    pam_unix.so nullok try_first_pass
-auth        requisite     pam_succeed_if.so uid >= 500 quiet
-auth        required      pam_deny.so
+#auth        sufficient    pam_unix.so nullok try_first_pass
+#auth        sufficient    pam_duo.so
+auth        requisite     pam_succeed_if.so uid >= 1000 quiet
+#                         full path this --- per recomendations
 auth        required      /lib64/security/pam_duo.so
 
 account     required      pam_unix.so
