@@ -27,6 +27,7 @@ mv /etc/pam.d/sshd /etc/pam.d/sshd.ORG
 echo "go get the FILES needed from GITHUB"
 cd /etc/duo/
 getno https://raw.githubusercontent.com/RobOJHU/DUO-Security/master/pam_duo.conf
+chmod 600 ./pam_duo.conf
 cd /etc/pam.d/
 getno https://raw.githubusercontent.com/RobOJHU/DUO-Security/master/system-auth
 getno https://raw.githubusercontent.com/RobOJHU/DUO-Security/master/sshd
@@ -39,3 +40,8 @@ service sshd restart
 
 
 echo "DOU install completed for a RHEL6 machine --RobO"
+echo "##########"
+echo "##########"
+echo "##########   you MUST remember to FIX the now obfuscated  /etc/duo/pam_duo.conf FILE ########"
+echo "##########"
+echo "##########"
