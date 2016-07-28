@@ -17,3 +17,4 @@ session    required     pam_loginuid.so
 session    required     pam_selinux.so open env_params
 session    optional     pam_keyinit.so force revoke
 session    include      password-auth
+# THIS is a GITHUB-file
