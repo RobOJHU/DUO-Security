@@ -25,10 +25,12 @@ mv /etc/pam.d/sshd /etc/pam.d/sshd.ORG
 
 #go get them from GITHUB
 echo "go get the FILES needed from GITHUB"
-
+cd /etc/duo/
 getno https://raw.githubusercontent.com/RobOJHU/DUO-Security/master/pam_duo.conf
+cd /etc/pam.d/
 getno https://raw.githubusercontent.com/RobOJHU/DUO-Security/master/system-auth
 getno https://raw.githubusercontent.com/RobOJHU/DUO-Security/master/sshd
+cd /etc/ssh/
 getno https://raw.githubusercontent.com/RobOJHU/DUO-Security/master/sshd_config
 
 
